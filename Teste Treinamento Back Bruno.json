@@ -1,0 +1,292 @@
+{
+  "name": "Teste Treinamento Back",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Atualiza User",
+      "filename": "Atualiza User.bru",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:3333/users/idp/{{id}}",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"NomeDoUsuário\": \"Damasio God\",\n  \"Senha\": \"Foda para caralho\",\n  \"Telefone\": \"11 953828135\",\n  \"DataDeNascimento\": \"11/09/2001\",\n  \"email\": \"JesusCrits.docs.Incrivel\",\n  \"cpf\": \"1\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Create User",
+      "filename": "Create User.bru",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:3333/users/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"NomeDoUsuário\": \"Goku\",\n  \"Senha\": \"Gohanchichigoten\",\n  \"Telefone\": \"11 915185185\",\n  \"DataDeNascimento\": \"10/06/406\",\n  \"email\": \"Kakaroto@gmail.com\",\n  \"cpf\": \"123456789-01\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Cria piu",
+      "filename": "Cria piu.bru",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:3333/pius/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"IdUser\":\"f72fbbf0-5775-46ba-af82-ae4826ae6eeb\",\n  \"Texto\": \"Eu quero desfrutar dos orificios alheios do mundo todo -Damasio 2025\",\n  \"NúmeroDeLikes\":\"2Bi\",\n  \"NúmeroDeComentários\":\"1Bi\"\n}\n\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Deleta piu",
+      "filename": "Deleta piu.bru",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:3333/pius/Idd/a02728ca-20b8-471f-a46a-08d27fdcc739",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Deleta user",
+      "filename": "Deleta user.bru",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:3333/users/idd/{{id}}",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "getAll",
+      "filename": "getAll.bru",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:3333/users/",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "id",
+              "value": "res.body[0].id",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "getId",
+      "filename": "getId.bru",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:3333/users/id/{{id}}",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "json": "{\n  \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Ler pius",
+      "filename": "Ler pius.bru",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:3333/pius/",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get Id piu",
+      "filename": "Get Id piu.bru",
+      "seq": 10,
+      "request": {
+        "url": "http://localhost:3333/pius/Id/8895f7fe-9efd-4447-af7d-b26c0b50a874",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Pius de um usuario",
+      "filename": "Pius de um usuario.bru",
+      "seq": 11,
+      "request": {
+        "url": "http://localhost:3333/pius/Idu/f72fbbf0-5775-46ba-af82-ae4826ae6eeb",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Teste Treinamento Back",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0016536712646484375,
+    "filesCount": 8
+  }
+}
